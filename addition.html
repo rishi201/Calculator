@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>   
+<body>
+    <div class="topnav">
+        <a href="index.html"><img src="hi.png" height="36px" width="36px"></a>
+        <a class="active" href="addition.html">Addition</a>
+        <a href="mean.html">Mean</a>
+        <a href="median.html">Median</a>
+        <a href="mode.html">Mode</a>
+    </div>
+<h1>Add a certain amount of numbers together.</h1>
+
+<button onclick = "
+try{
+const a1 = prompt(`how many numbers? please choose over 1.`)
+
+if(isNaN(parseInt(a1))) {
+    return alert(`please enter a number.`)
+    
+}else if(!a1 > `1` ) {
+    return alert(`please enter a number more than 1.`)
+    
+} 
+let hi;
+let ans;
+let m1;
+var numbers = new Array();
+for ( n = 1; n <= parseInt(a1); n++){
+m1 = prompt(`number ${n}`)
+
+ var newn = parseInt(m1)
+ m1 = ``
+ numbers[numbers.length] = newn
+ 
+  
+}
+ans = numbers.reduce((a, b) => (a + b)) 
+ alert(ans)
+ stop()     
+
+   
+ 
+}catch(e){
+alert(e)    
+}
+">Start</button>
+
+</body> 
+</html>
